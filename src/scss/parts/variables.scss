@@ -1,0 +1,40 @@
+//base sizes
+$main-container-size: 1280px;
+
+//colors
+$color-red: #ff3471;
+$color-blue: #2d036a;
+$color-white: #ffffff;
+$color-grey: #5d5a63;
+
+//mixins
+
+@mixin button-style(
+  $font-color,
+  $background-color,
+  $outline-color,
+  $font-color-active,
+  $background-color-active,
+  $outline-color-active
+) {
+  padding: 19px 27px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0.03em;
+  color: $font-color;
+
+  outline: 1px solid $outline-color;
+  border-radius: 40px;
+  background-color: $background-color;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    color: $font-color-active;
+    background-color: $background-color-active;
+    outline: $outline-color-active;
+  }
+}

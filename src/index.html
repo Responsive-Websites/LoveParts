@@ -2,17 +2,22 @@
 <html lang="en">
   @@include('html/head.html', { "title":"Main" })
   <body>
-    <!-- header -->
-    @@include('html/header.html', {})
-    <!-- =====- -->
+    <div class="wrapper">
+      <!-- Обёртка для изображения в виде бэкграунда -->
+      <div class="wrapper-sub">
+        <!-- header -->
+        @@include('html/header.html', {})
+        <!-- =====- -->
 
-    <!-- main -->
-    @@include('html/main.html', {})
-    <!-- =====- -->
+        <!-- main -->
+        @@include('html/main.html', {})
+        <!-- =====- -->
+      </div>
 
-    <!-- footer -->
-    @@include('html/footer.html', {})
-    <!-- =====- -->
+      <!-- footer -->
+      @@include('html/footer.html', {})
+      <!-- =====- -->
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>

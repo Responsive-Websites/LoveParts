@@ -1,1 +1,171 @@
 //header
+.header {
+  background-color: #1f0352;
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0px;
+    align-items: center;
+    position: relative;
+    @media screen and (max-width: $md-4) {
+      padding: 10px 0px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: -10px;
+  }
+
+  &__logo-img {
+    width: 38.26px;
+    height: 33.75px;
+  }
+
+  &__logo-text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 78%;
+    color: $color-red;
+    margin-left: 25.91px;
+
+    @media screen and (max-width: $md-3) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and (max-width: 1310px) {
+      padding: 0px 20px 0px 50px;
+    }
+    @media screen and (max-width: $md-4) {
+      padding: 0px 0px 0px 10px;
+    }
+    @media screen and (max-width: $md-3) {
+      justify-content: center;
+    }
+    @media screen and (max-width: $md-2) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__signin {
+    padding: 10px 10px;
+    margin-right: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 78%;
+    color: $color-white;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: $color-red;
+      @media screen and (max-width: $md-2) {
+        color: $color-white;
+      }
+    }
+    &:active {
+      color: #5dd1ff;
+    }
+    @media screen and (max-width: $md-4) {
+      margin-right: 30px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-right: 0px;
+
+      @include button-style($color-white, transparent, $color-white, $color-red, transparent, $color-red);
+      padding: 10px 30px;
+    }
+  }
+
+  &__reg {
+    @include button-style-transparent(
+      $color-red,
+      $color-white,
+      $color-white,
+      linear-gradient(6.91deg, #ff3471 30.79%, #710ba0 93.86%)
+    );
+    @media screen and (max-width: $md-4) {
+      padding: 12px 30px;
+    }
+    @media screen and (max-width: $md-2) {
+      display: none;
+    }
+  }
+
+  &__language {
+    // flex: 0 1 100%;
+    cursor: pointer;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 88%;
+    padding: 10px;
+    margin-right: -10px;
+
+    @media screen and (max-width: 1310px) {
+      margin: 0px 5px 0px 20px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin: 0px -5px 0px 10px;
+    }
+  }
+
+  &__language-choice {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transition: all 0.3s ease 0s;
+    &._active {
+      top: 110%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.language-choice {
+  &__list {
+    padding: 20px 30px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    li:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #1f03529c;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+  &__item {
+    color: $color-white;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.2s ease 0s;
+    &:hover {
+      color: $color-red;
+    }
+  }
+}

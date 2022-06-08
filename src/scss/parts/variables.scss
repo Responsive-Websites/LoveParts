@@ -7,8 +7,16 @@ $color-blue: #2d036a;
 $color-white: #ffffff;
 $color-grey: #5d5a63;
 
+//brakepoints
+$md-1: 320px;
+$md-2: 480px;
+$md-3: 768px;
+$md-4: 1024px;
+$md-5: 1200px;
+
 //mixins
 
+//button
 @mixin button-style(
   $font-color,
   $background-color,
@@ -23,18 +31,52 @@ $color-grey: #5d5a63;
   line-height: 122%;
   letter-spacing: 0.03em;
   color: $font-color;
-
-  outline: 1px solid $outline-color;
+  text-align: center;
+  border: 1px solid $outline-color;
   border-radius: 40px;
   background-color: $background-color;
   transition: all 0.3s ease 0s;
 
-  &:hover {
-    transform: scale(1.1);
-  }
   &:active {
     color: $font-color-active;
     background-color: $background-color-active;
-    outline: $outline-color-active;
+    border-color: $outline-color-active;
+  }
+}
+
+//border-gradient transparent-background button
+@mixin button-style-transparent($font-color, $border-color, $font-color-active, $gradient-active) {
+  padding: 19px 34px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0.03em;
+  color: $font-color;
+
+  border: 2px solid $border-color;
+  border-radius: 40px;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease 0s;
+
+  &:active {
+    border-color: transparent;
+    color: $font-color-active;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+
+      border-radius: 40px;
+      border: 2.4px solid transparent;
+      background: $gradient-active border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
   }
 }

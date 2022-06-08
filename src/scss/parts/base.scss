@@ -1,6 +1,23 @@
 //base
+
+html,
+body {
+  min-height: 100%;
+}
 body {
   font-family: Averta;
   font-size: 18px;
   font-weight: 400;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+.wrapper-sub {
+}
+._container {
+  max-width: $main-container-size;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
 }

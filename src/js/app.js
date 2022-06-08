@@ -3,6 +3,18 @@
 
 // 'use strict';
 
+//language select
+let lang_menu = document.querySelector('.header__language-choice');
+let user_lang = document.querySelector('.header__language');
+user_lang.addEventListener('click', function (e) {
+  lang_menu.classList.toggle('_active');
+});
+document.documentElement.addEventListener('click', function (e) {
+  if (!e.target.closest('.header__language')) {
+    lang_menu.classList.remove('_active');
+  }
+});
+
 // burger
 
 // let header_menu = document.querySelector('.menu__body');

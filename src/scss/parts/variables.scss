@@ -16,14 +16,14 @@ $md-5: 1200px;
 
 //mixins
 
-//button
+//button with border
 @mixin button-style(
   $font-color,
   $background-color,
-  $outline-color,
+  $border-color,
   $font-color-active,
   $background-color-active,
-  $outline-color-active
+  $border-color-active
 ) {
   padding: 19px 27px;
   font-weight: 600;
@@ -32,15 +32,35 @@ $md-5: 1200px;
   letter-spacing: 0.03em;
   color: $font-color;
   text-align: center;
-  border: 1px solid $outline-color;
+  border: 1px solid $border-color;
   border-radius: 40px;
-  background-color: $background-color;
+  background: $background-color;
   transition: all 0.3s ease 0s;
 
   &:active {
     color: $font-color-active;
-    background-color: $background-color-active;
-    border-color: $outline-color-active;
+    background: $background-color-active;
+    border-color: $border-color-active;
+  }
+}
+
+//button no border
+@mixin button-noBorder-style($font-color, $background-color, $font-color-active, $background-color-active) {
+  padding: 19px 27px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0.03em;
+  color: $font-color;
+  text-align: center;
+
+  border-radius: 40px;
+  background: $background-color;
+  transition: all 0.3s ease 0s;
+
+  &:active {
+    color: $font-color-active;
+    background: $background-color-active;
   }
 }
 

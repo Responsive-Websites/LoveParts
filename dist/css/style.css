@@ -148,6 +148,19 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.wrapper::before {
+  content: "";
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: url("../../img/main-screen/back-fix.png") no-repeat;
 }
 
 ._container {
@@ -157,9 +170,6 @@ body {
   box-sizing: content-box;
 }
 
-.header {
-  background-color: #1f0352;
-}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -258,13 +268,13 @@ body {
     text-align: center;
     border: 1px solid #ffffff;
     border-radius: 40px;
-    background-color: transparent;
+    background: transparent;
     transition: all 0.3s ease 0s;
     padding: 10px 30px;
   }
   .header__signin:active {
     color: #ff3471;
-    background-color: transparent;
+    background: transparent;
     border-color: #ff3471;
   }
 }
@@ -360,15 +370,146 @@ body {
   background-color: rgba(31, 3, 82, 0.6117647059);
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 5;
 }
 .language-choice__item {
   color: #ffffff;
   padding: 5px;
   position: relative;
-  z-index: 2;
+  z-index: 6;
   transition: all 0.2s ease 0s;
 }
 .language-choice__item:hover {
   color: #ff3471;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+.main__main-screen {
+  padding-top: 91px;
+}
+
+.main-screen {
+  position: relative;
+}
+.main-screen__inner {
+  position: relative;
+  z-index: 3;
+  min-height: 842px;
+}
+.main-screen__decor {
+  max-width: 623px;
+  margin-left: 72px;
+  margin-top: 67px;
+  display: inline-flex;
+  justify-content: space-between;
+  min-height: 169px;
+}
+.main-screen__decor-first {
+  max-width: 317px;
+  align-self: flex-start;
+}
+.main-screen__decor-second {
+  max-width: 317px;
+  align-self: flex-end;
+}
+.main-screen__line-decor {
+  position: absolute;
+  top: 26%;
+  left: 0;
+  z-index: 1;
+}
+
+.content-main-screen__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 146%;
+  letter-spacing: 0.03em;
+  color: #626cff;
+}
+.content-main-screen__title {
+  font-weight: 700;
+  font-size: 42.1731px;
+  line-height: 128%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  max-width: 646px;
+  margin-top: 15px;
+}
+.content-main-screen__title span {
+  color: #ff3471;
+}
+.content-main-screen__buttons {
+  display: flex;
+  margin-top: 52px;
+  align-items: center;
+}
+.content-main-screen__begin-btn {
+  display: inline-block;
+  margin-right: 51px;
+  padding: 19px 27px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 40px;
+  background: #ff3471;
+  transition: all 0.3s ease 0s;
+}
+.content-main-screen__begin-btn:active {
+  color: #ffffff;
+  background: linear-gradient(106.91deg, #ff3471 5.79%, #710ba0 93.86%);
+}
+.content-main-screen__reg-btn {
+  padding: 19px 34px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0.03em;
+  color: #ff3471;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease 0s;
+}
+.content-main-screen__reg-btn:active {
+  border-color: transparent;
+  color: #ffffff;
+}
+.content-main-screen__reg-btn:active::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 40px;
+  border: 2.4px solid transparent;
+  background: linear-gradient(6.91deg, #ff3471 30.79%, #710ba0 93.86%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.decor-main-screen {
+  color: #6959c9;
+  padding-left: 33px;
+  background: url("../../img/main-screen/red-icon.svg") left top no-repeat;
+}
+.decor-main-screen__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 96%;
+  letter-spacing: 0.03em;
+}
+.decor-main-screen__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4375;
 }

@@ -1,1 +1,110 @@
 //main
+.main {
+  flex: 1 1 auto;
+  &__main-screen {
+    padding-top: 91px;
+  }
+}
+.main-screen {
+  position: relative;
+  &__container {
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+    min-height: 842px;
+  }
+
+  &__content {
+  }
+  &__decor {
+    max-width: 623px;
+    margin-left: 72px;
+    margin-top: 67px;
+    display: inline-flex;
+    justify-content: space-between;
+    min-height: 169px;
+  }
+  &__decor-first {
+    max-width: 317px;
+    align-self: flex-start;
+  }
+
+  &__decor-second {
+    max-width: 317px;
+    align-self: flex-end;
+  }
+  &__line-decor {
+    position: absolute;
+    top: 26%;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.content-main-screen {
+  &__subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 146%;
+    letter-spacing: 0.03em;
+    color: #626cff;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42.1731px;
+    line-height: 128%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    max-width: 646px;
+    margin-top: 15px;
+    span {
+      color: $color-red;
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-top: 52px;
+    align-items: center;
+  }
+
+  &__begin-btn {
+    display: inline-block;
+    margin-right: 51px;
+    @include button-noBorder-style(
+      $color-white,
+      $color-red,
+      $color-white,
+      linear-gradient(106.91deg, #ff3471 5.79%, #710ba0 93.86%)
+    );
+  }
+
+  &__reg-btn {
+    @include button-style-transparent(
+      $color-red,
+      $color-white,
+      $color-white,
+      linear-gradient(6.91deg, #ff3471 30.79%, #710ba0 93.86%)
+    );
+  }
+}
+.decor-main-screen {
+  color: #6959c9;
+  padding-left: 33px;
+  background: url('../../img/main-screen/red-icon.svg') left top no-repeat;
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 96%;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(23 / 16);
+  }
+}

@@ -12,9 +12,21 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &::before {
+    content: '';
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: url('../../img/main-screen/back-fix.png') no-repeat;
+  }
 }
-.wrapper-sub {
-}
+
 ._container {
   max-width: $main-container-size;
   margin: 0 auto;

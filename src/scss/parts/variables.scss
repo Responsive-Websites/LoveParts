@@ -42,6 +42,12 @@ $md-5: 1200px;
     background: $background-color-active;
     border-color: $border-color-active;
   }
+  @media screen and (max-width: $md-4) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: $md-3) {
+    font-size: 16px;
+  }
 }
 
 //button no border
@@ -61,6 +67,15 @@ $md-5: 1200px;
   &:active {
     color: $font-color-active;
     background: $background-color-active;
+  }
+  @media screen and (max-width: $md-4) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: $md-3) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $md-2) {
+    font-size: 15px;
   }
 }
 
@@ -98,5 +113,14 @@ $md-5: 1200px;
       -webkit-mask-composite: destination-out;
       mask-composite: exclude;
     }
+  }
+  @media screen and (max-width: $md-4) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: $md-3) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $md-2) {
+    font-size: 15px;
   }
 }

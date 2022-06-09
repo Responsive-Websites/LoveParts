@@ -24,6 +24,21 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     background: url('../../img/main-screen/back-fix.png') no-repeat;
+
+    @media screen and (max-width: $md-5) {
+      background-position: 140px top;
+    }
+    @media screen and (max-width: $md-4) {
+      background-position: 0px top;
+    }
+    @media screen and (max-width: $md-2) {
+      top: -10px;
+      background: url('../../img/main-screen/back-mobile.png') center top / $md-2 no-repeat;
+    }
+    @media screen and (max-width: 375px) {
+      top: 0px;
+      background: url('../../img/main-screen/back-mobile.png') center top / 375px no-repeat;
+    }
   }
 }
 

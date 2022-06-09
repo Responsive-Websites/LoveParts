@@ -36,6 +36,10 @@
     @media screen and (max-width: $md-3) {
       display: none;
     }
+    @media screen and (max-width: $md-2) {
+      display: block;
+      margin-left: 9px;
+    }
   }
 
   &__nav {
@@ -80,10 +84,7 @@
       margin-right: 30px;
     }
     @media screen and (max-width: $md-2) {
-      margin-right: 0px;
-
-      @include button-style($color-white, transparent, $color-white, $color-red, transparent, $color-red);
-      padding: 10px 30px;
+      display: none;
     }
   }
 

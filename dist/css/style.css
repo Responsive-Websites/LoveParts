@@ -150,38 +150,29 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
-.wrapper::before {
-  content: "";
-  width: 1920px;
-  height: 1080px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background: url("../../img/main-screen/back-fix.png") no-repeat;
+.wrapper__sub {
+  flex: 1 1 auto;
+  background: url("../../img/main-screen/back-fix.png") top center no-repeat;
 }
-@media screen and (max-width: 1200px) {
-  .wrapper::before {
-    background-position: 140px top;
+@media screen and (max-width: 1920px) {
+  .wrapper__sub {
+    background: url("../../img/main-screen/back-fix.png") top center/100% no-repeat;
   }
 }
 @media screen and (max-width: 1024px) {
-  .wrapper::before {
-    background-position: 0px top;
+  .wrapper__sub {
+    background: url("../../img/main-screen/back-fix.png") top center/150% no-repeat;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper__sub {
+    background: url("../../img/main-screen/back-fix.png") top center/170% no-repeat;
   }
 }
 @media screen and (max-width: 480px) {
-  .wrapper::before {
-    top: -10px;
-    background: url("../../img/main-screen/back-mobile.png") center top/480px no-repeat;
-  }
-}
-@media screen and (max-width: 375px) {
-  .wrapper::before {
-    top: 0px;
-    background: url("../../img/main-screen/back-mobile.png") center top/375px no-repeat;
+  .wrapper__sub {
+    background: url("../../img/main-screen/back-mobile.png") top center/115% no-repeat;
   }
 }
 
@@ -409,9 +400,6 @@ body {
   color: #ff3471;
 }
 
-.main {
-  flex: 1 1 auto;
-}
 .main__main-screen {
   padding-top: 91px;
 }
@@ -436,16 +424,16 @@ body {
   }
 }
 .main__benefits {
-  margin-top: 140px;
+  margin-top: 0px;
 }
-@media screen and (max-width: 1151px) {
+@media screen and (max-width: 1024px) {
   .main__benefits {
     margin-top: 80px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .main__benefits {
-    margin-top: 20px;
+    margin-top: 60px;
   }
 }
 
@@ -515,12 +503,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .main-screen__decor {
-    margin-top: 140px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .main-screen__decor {
-    margin-top: 80px;
+    margin-top: 92px;
     margin-left: 22px;
   }
 }
@@ -776,112 +759,118 @@ body {
 
 .benefits__items {
   display: flex;
-  padding-bottom: 140px;
+  margin: 0px -20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .benefits__items {
-    padding-bottom: 40px;
+    display: block;
+    margin: 0px 0px;
   }
 }
 .benefits__item {
-  flex: 0 1 50%;
-  text-align: center;
-  padding: 228px 60px 96px 60px;
-  position: relative;
-}
-.benefits__item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../../img/benefits/arrow-background.svg") center no-repeat;
-  z-index: -2;
-}
-@media screen and (max-width: 1151px) {
-  .benefits__item::before {
-    background: url("../../img/benefits/arrow-background.svg") center/450px no-repeat;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .benefits__item::before {
-    background: url("../../img/benefits/arrow-background.svg") center/370px no-repeat;
-  }
-}
-@media screen and (max-width: 768px) {
-  .benefits__item::before {
-    z-index: 1;
-    opacity: 0.7;
-    background: url("../../img/benefits/arrow-background.svg") center/350px no-repeat;
-  }
+  flex: 0 1 552px;
+  margin: 0px 20px;
+  min-height: 774px;
+  background: url("../../img/benefits/arrow-background.svg") center/contain no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .benefits__item:last-child {
-  top: 220px;
+  margin-top: 360px;
 }
 @media screen and (max-width: 1024px) {
   .benefits__item:last-child {
-    top: 140px;
+    margin-top: 160px;
   }
 }
 @media screen and (max-width: 768px) {
   .benefits__item:last-child {
-    top: 60px;
+    margin-top: 0px;
   }
 }
 @media screen and (max-width: 1024px) {
   .benefits__item {
-    padding: 168px 60px 106px 60px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 504px;
   }
 }
 @media screen and (max-width: 768px) {
   .benefits__item {
-    padding: 108px 40px 106px 40px;
+    min-height: 504px;
+    flex: 0 1 auto;
+    max-width: 350px;
+    margin: 0 auto;
+    background: url("../../img/benefits/arrow-background.svg") top/contain no-repeat;
+  }
+  .benefits__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .benefits__item {
+    min-height: 434px;
+  }
+}
+.benefits__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  padding: 0px 80px;
+}
+@media screen and (max-width: 886px) {
+  .benefits__content {
+    padding: 0px 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .benefits__content {
+    padding: 0px 40px;
   }
 }
 .benefits__image {
   width: 100%;
-  margin-bottom: 76px;
+  margin-bottom: 77px;
+}
+@media screen and (max-width: 1024px) {
+  .benefits__image {
+    margin-bottom: 47px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .benefits__image {
+    margin-bottom: 37px;
+  }
 }
 .benefits__image_first {
   max-width: 260px;
 }
-@media screen and (max-width: 1151px) {
+@media screen and (max-width: 1200px) {
   .benefits__image_first {
-    max-width: 215px;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .benefits__image_first {
+    max-width: 150px;
   }
 }
 @media screen and (max-width: 768px) {
   .benefits__image_first {
-    max-width: 180px;
+    max-width: 100px;
   }
 }
 .benefits__image_second {
   max-width: 385px;
 }
-@media screen and (max-width: 1151px) {
-  .benefits__image_second {
-    max-width: 275px;
-  }
-}
 @media screen and (max-width: 768px) {
   .benefits__image_second {
-    max-width: 230px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .benefits__image {
-    margin-bottom: 26px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .benefits__image {
-    position: relative;
-    z-index: 2;
+    max-width: 205px;
   }
 }
 .benefits__title {

@@ -4,14 +4,15 @@
   <body>
     <div class="wrapper">
       <!-- Обёртка для изображения в виде бэкграунда -->
+      <div class="wrapper__sub">
+        <!-- header -->
+        @@include('html/header.html', {})
+        <!-- =====- -->
 
-      <!-- header -->
-      @@include('html/header.html', {})
-      <!-- =====- -->
-
-      <!-- main -->
-      @@include('html/main.html', {})
-      <!-- =====- -->
+        <!-- main -->
+        @@include('html/main.html', {})
+        <!-- =====- -->
+      </div>
 
       <!-- footer -->
       @@include('html/footer.html', {})

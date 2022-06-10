@@ -183,6 +183,23 @@ body {
   box-sizing: content-box;
 }
 
+._ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+._ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -463,6 +480,55 @@ body {
     margin-bottom: 40px;
   }
 }
+.main__payment-methods {
+  margin-top: 142px;
+}
+@media screen and (max-width: 1200px) {
+  .main__payment-methods {
+    margin-top: 84px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main__payment-methods {
+    margin-top: 94px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main__payment-methods {
+    margin-top: 84px;
+  }
+}
+.main__support {
+  margin-top: 90px;
+}
+@media screen and (max-width: 1024px) {
+  .main__support {
+    margin-top: 84px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__support {
+    margin-top: 74px;
+  }
+}
+.main__full-screen {
+  margin-top: 96px;
+}
+@media screen and (max-width: 1024px) {
+  .main__full-screen {
+    margin-top: 84px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__full-screen {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__full-screen {
+    margin-top: 52px;
+  }
+}
 
 .main-screen {
   position: relative;
@@ -647,6 +713,7 @@ body {
   letter-spacing: 0.03em;
   color: #ffffff;
   text-align: center;
+  display: inline-block;
   border-radius: 40px;
   background: #ff3471;
   transition: all 0.3s ease 0s;
@@ -1193,5 +1260,297 @@ body {
 @media screen and (max-width: 1024px) {
   .banner__image-decor {
     background: url("../../img/banner/decor-fix.png") center/contain no-repeat;
+  }
+}
+
+.payment-methods__container {
+  text-align: center;
+}
+.payment-methods__title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 71%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #757575;
+}
+@media screen and (max-width: 1024px) {
+  .payment-methods__title {
+    font-size: 29px;
+    line-height: 101%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payment-methods__title {
+    font-size: 36px;
+    line-height: 128%;
+  }
+}
+.payment-methods__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 31px -10px 0px -10px;
+}
+@media screen and (max-width: 1024px) {
+  .payment-methods__inner {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payment-methods__inner {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 31px 0px 0px 0px;
+  }
+}
+.payment-methods__item {
+  flex: 0 1 auto;
+  margin: 0 10px;
+  display: inline-block;
+}
+@media screen and (max-width: 1024px) {
+  .payment-methods__item:first-child {
+    flex: 0 1 100%;
+    margin-bottom: 20px;
+  }
+  .payment-methods__item:first-child img {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payment-methods__item:first-child {
+    flex: 0 1 auto;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .payment-methods__item:last-child {
+    flex: 0 1 100%;
+    margin-top: 20px;
+  }
+  .payment-methods__item:last-child img {
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payment-methods__item:last-child {
+    flex: 0 1 auto;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payment-methods__item {
+    margin: 0 0px;
+  }
+  .payment-methods__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.payment-methods__image {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.support__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .support__inner {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .support__inner {
+    text-align: center;
+  }
+}
+.support__content {
+  flex: 0 1 598px;
+}
+@media screen and (max-width: 1024px) {
+  .support__content {
+    text-align: center;
+  }
+}
+.support__title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 83%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #2d036a;
+}
+@media screen and (max-width: 1024px) {
+  .support__title {
+    font-size: 38px;
+    line-height: 110%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .support__title {
+    font-size: 36px;
+    line-height: 128%;
+  }
+}
+.support__terms {
+  margin-top: 48px;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 73%;
+  letter-spacing: 0.03em;
+  color: #2d036a;
+  padding-left: 58px;
+  padding-bottom: 10px;
+  background: url("../../img/support/ok-icon.svg") left no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .support__terms {
+    font-size: 24px;
+    margin-top: 38px;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .support__terms {
+    font-size: 21.7172px;
+    line-height: 123%;
+    padding-left: 38px;
+    background: url("../../img/support/ok-icon.svg") left center/30px no-repeat;
+  }
+}
+.support__text {
+  margin-top: 26px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 122%;
+  color: #5d5a63;
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 480px) {
+  .support__text {
+    margin-top: 15px;
+    font-size: 15.035px;
+    line-height: 122%;
+    text-align: left;
+  }
+}
+.support__button {
+  padding: 19px 27px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  border-radius: 40px;
+  background: #ff3471;
+  transition: all 0.3s ease 0s;
+  margin-top: 48px;
+}
+.support__button:active {
+  color: #ff3471;
+  background: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .support__button {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .support__button {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .support__button {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .support__button {
+    margin-top: 52px;
+  }
+}
+.support__image {
+  flex: 0 1 429px;
+  margin-left: 50px;
+}
+.support__image img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .support__image {
+    margin-left: 0px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 51px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .support__image {
+    max-width: 274px;
+  }
+}
+
+.full-screen {
+  min-height: 100vh;
+}
+.full-screen__inner {
+  min-height: 100vh;
+}
+.full-screen__title {
+  max-width: 1280px;
+  margin: 0px auto 0px auto;
+  padding-top: 106px;
+  padding-left: 15px;
+  font-weight: 700;
+  font-size: 69.4133px;
+  line-height: 83%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.full-screen__title span {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 76%;
+  display: inline-block;
+}
+@media screen and (max-width: 1106px) {
+  .full-screen__title {
+    padding-top: 36px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .full-screen__title {
+    font-size: 50px;
+  }
+  .full-screen__title span {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .full-screen__title {
+    padding-top: 30px;
+    font-size: 40px;
+  }
+  .full-screen__title span {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .full-screen__title {
+    padding-top: 20px;
+    font-size: 35px;
+  }
+  .full-screen__title span {
+    font-size: 20px;
   }
 }

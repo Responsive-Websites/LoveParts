@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Main</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <title>Main</title>
 </head>
+
   <body>
     <div class="wrapper">
       <!-- Обёртка для изображения в виде бэкграунда -->
@@ -159,14 +161,28 @@
       </div>
     </div>
   </section>
-  <div class="main__full-screen full-screen">
-    <div class="full-screen__inner _ibg">
-      <p class="full-screen__title">
-        Удобная <br />
-        <span>админ панель</span>
-      </p>
-      <img src="img/fullscreen/fullscreen-image.png" alt="" />
+  <div class="main__full-screen full-screen swiper">
+    <div class="full-screen__inner swiper-wrapper">
+      <div class="full-screen__slide swiper-slide">
+        <div class="full-screen__inner _ibg">
+          <p class="full-screen__title">
+            Удобная <br />
+            <span>админ панель</span>
+          </p>
+          <img src="img/fullscreen/fullscreen-image.png" alt="" />
+        </div>
+      </div>
+      <div class="full-screen__slide swiper-slide">
+        <div class="full-screen__inner _ibg">
+          <p class="full-screen__title">
+            Красивый <br />
+            <span>дизайн</span>
+          </p>
+          <img src="img/fullscreen/fullscreen-image.png" alt="" />
+        </div>
+      </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </main>
 
@@ -179,6 +195,7 @@
 
       <!-- =====- -->
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

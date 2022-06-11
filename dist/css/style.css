@@ -1478,6 +1478,9 @@ body {
     margin-top: 52px;
   }
 }
+.support__button:active {
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
 .support__image {
   flex: 0 1 429px;
   margin-left: 50px;
@@ -1501,6 +1504,11 @@ body {
 
 .full-screen {
   min-height: 100vh;
+}
+@media screen and (max-width: 480px) {
+  .full-screen ._ibg {
+    background-position: 40% center;
+  }
 }
 .full-screen__inner {
   min-height: 100vh;

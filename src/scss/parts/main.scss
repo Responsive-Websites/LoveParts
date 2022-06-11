@@ -808,6 +808,9 @@
     @media screen and (max-width: $md-2) {
       margin-top: 52px;
     }
+    &:active {
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    }
   }
 
   &__image {
@@ -832,9 +835,17 @@
 //full-screen  =============
 .full-screen {
   min-height: 100vh;
-
+  @media screen and (max-width: $md-2) {
+    & ._ibg {
+      background-position: 40% center;
+    }
+  }
   &__inner {
     min-height: 100vh;
+  }
+  &__slide {
+  }
+  &__inner {
   }
 
   &__title {

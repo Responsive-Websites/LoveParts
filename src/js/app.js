@@ -237,3 +237,18 @@ const da = new DynamicAdapt('max');
 da.init();
 
 // =========================================================
+
+// sliders
+let main_slider = new Swiper('.main__full-screen', {
+  loop: true,
+  speed: 2000,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
+  },
+});
